@@ -1,5 +1,5 @@
 <head>
-	<title>Factor Num Up</title>
+	<title>因數增加 - Factor Num Up</title>
 	<link href="stylesheets/theme.css" rel="stylesheet">
 	<link id='theme' rel="stylesheet">
 	<script type="text/javascript" src="src/data.js?7"></script>
@@ -90,10 +90,10 @@
 		<button id='prestige_1' onclick='checkReset(1)'>轉換你的數字，<br>擁抱力量！</button>
 		<br><br>
 		<div id='featureTabs' style='display:none'>
-			<button onclick='switchFeatureTab("features")'>Features</button>
-			<button id='featureTabButton_upgrades' style='display:none' onclick='switchFeatureTab("upgrades")'>Upgrades</button>
-			<button id='featureTabButton_boosts' style='display:none' onclick='switchFeatureTab("boosts")'>Boosts</button>
-			<button id='featureTabButton_game_break' style='display:none' onclick='switchFeatureTab("game_break")'>Game Break</button>
+			<button onclick='switchFeatureTab("features")'>特徵</button>
+			<button id='featureTabButton_upgrades' style='display:none' onclick='switchFeatureTab("upgrades")'>升級</button>
+			<button id='featureTabButton_boosts' style='display:none' onclick='switchFeatureTab("boosts")'>加成</button>
+			<button id='featureTabButton_game_break' style='display:none' onclick='switchFeatureTab("game_break")'>破裂遊戲</button>
 		</div>
 		<div id='featureTab_features' style='display:none'>
 			<table class='table_prime'>
@@ -157,13 +157,13 @@
 			</table>
 		</div>
 		<div id='featureTab_upgrades' style='display:none'>
-			<div><b>Prime factor</b>: <text id='prime_factor'></text></div>
+			<div><b>質數因數</b>: <text id='prime_factor'></text></div>
 			<table class='table_prime'>
 				<tr>
-					<td>The number increases 10x faster.</td>
-					<td>Factors can increase by 26/25x instead of adding after 25x.</td>
-					<td>Cost multiplier is reduced to 1.4^[factor #]x.</td>
-					<td>Factor VII is raised to 1.5th power.</td>
+					<td>數字增加快10倍。</td>
+					<td>因數可以增加26/25倍，而不是在25倍後增加。</td>
+					<td>成本倍數減少到1.4^[因數數量]x.</td>
+					<td>第七因數用了1.5的冪。</td>
 				</tr>
 				<tr>
 					<td><button id='upgrade_1' onclick='buyUpgrade(1)'></button></td>
