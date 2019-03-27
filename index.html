@@ -19,22 +19,22 @@
 		<div id='parallelDust_detailed'>| <b>平行塵</b>: <text id='parallelDustAmount_detailed'></text></div>
 	</div>
 	<div>
-		<button onclick='switchTab("factors")'>Factors</button>
-		<button id='tabButton_prime' style='display:none' onclick='switchTab("prime")'>New request!</button>
-		<button onclick='switchTab("statistics")'>Statistics</button>
-		<button onclick='switchTab("milestones")'>Milestones</button>
-		<button onclick='switchTab("options")'>Options</button>
+		<button onclick='switchTab("factors")'>因數</button>
+		<button id='tabButton_prime' style='display:none' onclick='switchTab("prime")'>新請求！</button>
+		<button onclick='switchTab("statistics")'>統計</button>
+		<button onclick='switchTab("milestones")'>里程碑</button>
+		<button onclick='switchTab("options")'>選項</button>
 	</div>
 	<div id='tab_factors'>
 		<table id='buyQuantity' style='display:none'>
 			<tr>
 				<td id='advancedBuying'>
-					<button onclick='advancedBuy()'>Advanced Buy</button>
-					<button onclick='openAdvBuySetting(1)'>Settings</button>
+					<button onclick='advancedBuy()'>進階購買</button>
+					<button onclick='openAdvBuySetting(1)'>選項</button>
 				</td>
 				<td id='automatedBuying'>
-					<button id='button_automatedBuying' onclick='toggleAutoBuy()'>Automation Buy: Off</button>
-					<button onclick='openAdvBuySetting(2)'>Settings</button>
+					<button id='button_automatedBuying' onclick='toggleAutoBuy()'>自動購買: 關</button>
+					<button onclick='openAdvBuySetting(2)'>選項</button>
 				</td>
 				<td>
 					<button id='buyMode' style='display:none' onclick='switchBuyMode()'></button>
@@ -42,7 +42,7 @@
 				</td>
 			</tr>
 			<tr id='automatedBuyingSettings' style='display:none'><td></td><td>
-				<b>Interval</b>: <text id='autoBuyInterval'></text>
+				<b>時間間隔</b>: <text id='autoBuyInterval'></text>
 				<button id='upgrade_autoBuyInterval' onclick='reduceAutoBuyInterval()'></button>
 				<text id='automatic_embrace'></text>
 			</td><td></td></tr>
