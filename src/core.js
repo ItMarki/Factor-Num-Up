@@ -80,14 +80,14 @@ function format(value,dpBefore1000,smallAllowed=false) {
 }
 
 function formatRate(r) {
-	if (r*31556952<0.0095) return '0.00/s'
-	else if (r*31556952<11.95) return (r*31556952).toFixed(2)+'/y'
-	else if (r*2629746<4.345) return (r*2629746).toFixed(2)+'/mo'
-	else if (r*604800<6.995) return (r*604800).toFixed(2)+'/w'
-	else if (r*86400<23.95) return (r*86400).toFixed(2)+'/d'
-	else if (r*3600<59.95) return (r*3600).toFixed(2)+'/h'
-	else if (r*60<59.95) return (r*60).toFixed(2)+'/m'
-	else return format(r,2)+'/s'
+	if (r*31556952<0.0095) return '0.00/秒'
+	else if (r*31556952<11.95) return (r*31556952).toFixed(2)+'/年'
+	else if (r*2629746<4.345) return (r*2629746).toFixed(2)+'/月'
+	else if (r*604800<6.995) return (r*604800).toFixed(2)+'/星期'
+	else if (r*86400<23.95) return (r*86400).toFixed(2)+'/日'
+	else if (r*3600<59.95) return (r*3600).toFixed(2)+'/小時'
+	else if (r*60<59.95) return (r*60).toFixed(2)+'/分鐘'
+	else return format(r,2)+'/秒'
 }
 
 function formatTime(s) {
