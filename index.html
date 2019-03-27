@@ -8,15 +8,15 @@
 </head>
 <body onload='loadGame()'>
 	<div id='notification'></div>
-	<div><b>Number</b>: <text id='number'>0.00 (+1.00/s)</text></div>
-	<div id='primes' style='display:none'><b>Primes</b>: <text id='primesAmount'></text></div>
+	<div><b>數字</b>: <text id='number'>0.00 (+1.00/s)</text></div>
+	<div id='primes' style='display:none'><b>質數</b>: <text id='primesAmount'></text></div>
 	<button id='embrace_shortcut' style='display:none' onclick='checkReset(1)'></button>
 	<div id='fuel_detailed' style='display:none'><b>Fuel</b>: <text id='fuelAmount_detailed'></text>
-		<div id='challenge_detailed' style='display:none'>| <b>Challenge</b>: <text id='challengeId_detailed'></text></div>
+		<div id='challenge_detailed' style='display:none'>| <b>挑戰</b>: <text id='challengeId_detailed'></text></div>
 	</div>
-	<div id='bugs_detailed' style='display:none'><b>Bugs</b>: <text id='bugsAmount_detailed'></text>
-		<div id='halfClicks_detailed'>| <b>Half clicks</b>: <text id='halfClicksAmount_detailed'></text></div>
-		<div id='parallelDust_detailed'>| <b>Parallel dust</b>: <text id='parallelDustAmount_detailed'></text></div>
+	<div id='bugs_detailed' style='display:none'><b>錯誤</b>: <text id='bugsAmount_detailed'></text>
+		<div id='halfClicks_detailed'>| <b>半按</b>: <text id='halfClicksAmount_detailed'></text></div>
+		<div id='parallelDust_detailed'>| <b>平行塵</b>: <text id='parallelDustAmount_detailed'></text></div>
 	</div>
 	<div>
 		<button onclick='switchTab("factors")'>Factors</button>
