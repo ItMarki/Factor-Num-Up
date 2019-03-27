@@ -198,27 +198,27 @@
 			</table>
 		</div>
 		<div id='featureTab_boosts' style='display:none'>
-			<div><b>Boost factor</b>: <text id='boost_factor'></text></div>
+			<div><b>加成因數</b>: <text id='boost_factor'></text></div>
 			<table class='table_2_col'><tr>
 				<td>
-					<b>Fuel</b>: <text id='fuel'></text><Br>
+					<b>燃料</b>: <text id='fuel'></text><Br>
 					<button id='buy_fuel' onclick='buyFuel()'></button>
 					<button id='upgrade_fuel_efficient' onclick='upgradeFuelEfficient()'></button>
 					<button id='remove_fuel_efficient' onclick='removeFuelEfficient()'></button>
 				</td>
 				<td id='fuelPack'></td>
 			</tr></table>
-			<div id='nextBoost'><b>Next boost unlocks at</b>: <text id='nextBoost_value'></text> fuel</div>
-			<div id='nextChallenge'><b>Next challenge unlocks at</b>: <text id='nextChallenge_value'></text> fuel</div>
+			<div id='nextBoost'><b>下一個加成在</b>: <text id='nextBoost_value'></text>燃料</div>
+			<div id='nextChallenge'><b>下一個挑戰在</b>: <text id='nextChallenge_value'></text>燃料</div>
 			<div id='currentChallenge'></div>
 			<div id='challenge_factor'></div>
 			<table class='table_prime'>
 				<tr><td></td><td></td><td></td><td></td></tr>
 				<tr>
-					<td id='boost_1'>The number increases 2^sqrt(n)x faster.</td>
-					<td id='boost_2'>All costs are reduced by 10^sqrt(n)x.</td>
-					<td id='boost_3'>The number increases faster based on your playtime.</td>
-					<td id='boost_4'>The number increases faster based on your prime amount.</td>
+					<td id='boost_1'>數字增加得快2^sqrt(n)倍。</td>
+					<td id='boost_2'>全部成本減少10^sqrt(n)x。</td>
+					<td id='boost_3'>基於你遊玩時間，數字增加得更快。</td>
+					<td id='boost_4'>基於你質數數量，數字增加得更快。</td>
 				</tr>
 				<tr>
 					<td id='boost_buttons_1'></td>
