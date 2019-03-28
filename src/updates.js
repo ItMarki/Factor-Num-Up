@@ -339,15 +339,15 @@ function showNotification(message,delay=0) {
 
 function updateMilestones() {
 	var result=''
-	for (i=1;i<Math.min(player.milestones+2,24);i++) result=result+'<tr><td><b>Milestone #'+i+'</b>: '+milestoneRequirements[i-1]+'</td><td>'+(i>player.milestones?'Incomplete':'Completed')+'</td></tr>'
+	for (i=1;i<Math.min(player.milestones+2,24);i++) result=result+'<tr><td><b>里程碑 #'+i+'</b>: '+milestoneRequirements[i-1]+'</td><td>'+(i>player.milestones?'Incomplete':'Completed')+'</td></tr>'
 	updateElement('table_milestones',result)
-	updateElement('nextMilestone',player.options.detailed?'<b>Next milestone</b> ('+Math.floor(player.milestones/23*100)+'%; '+player.milestones+' / 23):<br>'+(player.milestones>20?'None! Congratulations!':milestoneRequirements[player.milestones]):'')
+	updateElement('nextMilestone',player.options.detailed?'<b>下一個里程碑</b> ('+Math.floor(player.milestones/23*100)+'%; '+player.milestones+' / 23):<br>'+(player.milestones>20?'None! Congratulations!':milestoneRequirements[player.milestones]):'')
 }
 
 function getMilestone(id) {
 	if (id>player.milestones) {
 		player.milestones=id
-		showNotification('<b>Milestone #'+id+' got!</b><br>'+milestoneRequirements[id-1],(id==13||id==16||id==17)?7000:0)
+		showNotification('<b>里程碑 #'+id+'獲得！</b><br>'+milestoneRequirements[id-1],(id==13||id==16||id==17)?7000:0)
 		updateMilestones()
 	}
 }
