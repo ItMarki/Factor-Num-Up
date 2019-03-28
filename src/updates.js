@@ -325,7 +325,7 @@ function gameTick() {
 			updateElement('statisticsValue_highestParallelUniverse','#'+(player.statistics.highestParallelUniverse+1))
 		} else hideElement('statistics_highestParallelUniverse')
 	}
-	if (currentTab=='options') updateElement('option_save','Save<br>('+(sinceLastSave==1?'a second':sinceLastSave+' seconds')+' ago)')
+	if (currentTab=='options') updateElement('option_save','保存<br>('+(sinceLastSave==1?'1秒':sinceLastSave+'秒')+'前)')
 }
 
 function showNotification(message,delay=0) {
