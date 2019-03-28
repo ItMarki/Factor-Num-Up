@@ -339,7 +339,7 @@ function showNotification(message,delay=0) {
 
 function updateMilestones() {
 	var result=''
-	for (i=1;i<Math.min(player.milestones+2,24);i++) result=result+'<tr><td><b>里程碑 #'+i+'</b>: '+milestoneRequirements[i-1]+'</td><td>'+(i>player.milestones?'Incomplete':'Completed')+'</td></tr>'
+	for (i=1;i<Math.min(player.milestones+2,24);i++) result=result+'<tr><td><b>里程碑 #'+i+'</b>: '+milestoneRequirements[i-1]+'</td><td>'+(i>player.milestones?'未完成':'已完成')+'</td></tr>'
 	updateElement('table_milestones',result)
 	updateElement('nextMilestone',player.options.detailed?'<b>下一個里程碑</b> ('+Math.floor(player.milestones/23*100)+'%; '+player.milestones+' / 23):<br>'+(player.milestones>20?'None! Congratulations!':milestoneRequirements[player.milestones]):'')
 }
