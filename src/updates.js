@@ -208,7 +208,7 @@ function gameTick() {
 			updateElement('prestige_1',(tempChallenge==challengeNextPrime?(tbnpDiff>0?'Break the game and alter the production':tempChallenge>0?'Embrace the power and retry the challenge #'+tempChallenge:'Embrace the power of prime'):challengeNextPrime==0?'Exit the challenge to become normal':'Start the challenge with negative boost #'+challengeNextPrime)+'.<br>Gain '+format(tempPrimeGain)+' prime.<br>'+(player.prime.features>2?'('+formatRate(tempPrimeGainRate)+'; peak: '+formatRate(tempPrimeGainRatePeak)+')':''))
 			if (currentFeatureTab=='features') {
 				for (id=1;id<Math.min(player.prime.features+2,19);id++) {
-					updateElement('featureUnlock_'+id,'Cost: '+format(costs.features[id-1])+' P')
+					updateElement('featureUnlock_'+id,'成本: '+format(costs.features[id-1])+' P')
 					if (player.prime.features<id) updateClass('featureUnlock_'+id,player.prime.primes<costs.features[id-1]?'button_unaffordable':'')
 				}
 			}
@@ -216,7 +216,7 @@ function gameTick() {
 				updateElement('prime_factor',format(virtual.activated?virtual.primeFactor:primeFactor)+'x')
 				var showMoreUpgs=player.prime.boosts.fuelEfficient>1||player.prime.gameBreak.parallelUniverse>0
 				for (id=1;id<(showMoreUpgs?13:9);id++) {
-					updateElement('upgrade_'+id,'Cost: '+format(costs.upgrades[id-1])+' P')
+					updateElement('upgrade_'+id,'成本: '+format(costs.upgrades[id-1])+' P')
 					updateClass('upgrade_'+id,player.prime.upgrades.includes(id)?'button_bought':player.prime.primes<costs.upgrades[id-1]?'button_unaffordable':'')
 				}
 				if (showMoreUpgs) {
@@ -231,7 +231,7 @@ function gameTick() {
 				var tempBoostFactor=player.activated?virtual.boostFactors[0]:boostFactors[0]
 				updateElement('boost_factor',(tempBoostFactor<1?format(tempBoostFactor,2,true):format(tempBoostFactor))+'x')
 				updateElement('fuel',(player.prime.features>8?'('+tempFuelEfficient+'% efficient) ':'')+remainingFuel+' / '+player.prime.boosts.fuel)
-				updateElement('buy_fuel','Cost: '+format(costs.fuel)+' P')
+				updateElement('buy_fuel','成本: '+format(costs.fuel)+' P')
 				updateClass('buy_fuel',player.prime.primes<costs.fuel?'button_unaffordable':'')
 				var challengeCheck1=0
 				var challengeCheck2=0
@@ -242,7 +242,7 @@ function gameTick() {
 				}
 				if (player.prime.features>7) {
 					showElement('upgrade_fuel_efficient','table-row')
-					updateElement('upgrade_fuel_efficient','Upgrade Efficiency<br>Cost: '+format(costs.fuelEfficient)+' P')
+					updateElement('upgrade_fuel_efficient','Upgrade Efficiency<br>成本: '+format(costs.fuelEfficient)+' P')
 					updateClass('upgrade_fuel_efficient',player.prime.primes<costs.fuelEfficient?'button_unaffordable':'')
 				} else hideElement('upgrade_fuel_efficient')
 			}
@@ -262,7 +262,7 @@ function gameTick() {
 					var tempHalfClickGain=virtual.activated?virtual.halfClickGain:halfClickGain
 					updateElement('half_click_gain','You will gain '+format(tempHalfClickGain)+' half click'+(tempHalfClickGain!=1?'s':'')+' after you complete challenge 4.')
 					for (id=1;id<(showMoreUpgs?9:5);id++) {
-						updateElement('break_upgrade_'+id,'Cost: '+format(costs.breakUpgrades[id-1])+' HC')
+						updateElement('break_upgrade_'+id,'成本: '+format(costs.breakUpgrades[id-1])+' HC')
 						updateClass('break_upgrade_'+id,player.prime.gameBreak.upgrades.includes(id)?'button_bought':player.prime.gameBreak.halfClicks<costs.breakUpgrades[id-1]?'button_unaffordable':'')
 					}
 					if (showMoreUpgs) {
@@ -406,7 +406,7 @@ function updateFactorDisplay() {
 			var factorLevel=tempFactorLevel+(tempExtraFactorLevel>tempFactorLevel?' + '+(tempExtraFactorLevel-tempFactorLevel):tempExtraFactorLevel<tempFactorLevel?' - '+(tempFactorLevel-tempExtraFactorLevel):'')
 			updateElement('factor_'+(i+1),tempFactor>tempExtraFactorLevel?format(tempFactor)+'x ('+factorLevel+')':factorLevel+'x')
 			var tempCost=virtual.activated?virtual.costs[i]:costs.factors[i]
-			updateElement('factorUpgrade_'+(i+1),'Cost: '+format(tempCost))
+			updateElement('factorUpgrade_'+(i+1),'成本: '+format(tempCost))
 			updateClass('factorUpgrade_'+(i+1),(virtual.activated?player.prime.boosts.virtual.number:player.number)<tempCost?'button_unaffordable':'')
 		}
 	}
@@ -457,7 +457,7 @@ function updateFeatures() {
 			showElement('featureDescription_'+id,'table-cell')
 			showElement('featureUnlock_'+id,'inline')
 			updateElement('featureDescription_'+id,'<b>'+featureDescriptions[id-1][0]+'</b><br>'+featureDescriptions[id-1][1])
-			updateElement('featureUnlock_'+id,'Cost: '+format(costs.features[id-1])+' P')
+			updateElement('featureUnlock_'+id,'成本: '+format(costs.features[id-1])+' P')
 			updateClass('featureUnlock_'+id,player.prime.features>=id?'button_bought':player.prime.primes<costs.features[id-1]?'button_unaffordable':'')
 		}
 	}
@@ -716,7 +716,7 @@ function reduceAutoBuyInterval() {
 
 function updateAutoBuyIntervalDisplay() {
 	updateElement('autoBuyInterval',(player.prime.automatedBuying.interval<0.1?format(player.prime.automatedBuying.interval,1,true):player.prime.automatedBuying.interval.toFixed(2))+'s (-10%)')
-	updateElement('upgrade_autoBuyInterval','Cost: '+format(costs.autoBuyInterval)+' P')
+	updateElement('upgrade_autoBuyInterval','成本: '+format(costs.autoBuyInterval)+' P')
 	updateClass('upgrade_autoBuyInterval',player.prime.primes<costs.autoBuyInterval?'button_unaffordable':'')
 	updateElement('automatic_embrace',player.prime.features>5?"<br><b>Automatic Embrace</b>: <input id='option_automatic_embrace' type='checkbox' onchange='changeAdvBuySetting(0,3)' "+((virtual.activated?player.prime.boosts.virtual.automatedBuying.automatedEmbrace:player.prime.automatedBuying.prime.enabled)?'checked':'')+"><br><b>Wait (prime) for next embrace</b>: <input id='option_wait_for_next' type='text' onchange='changeAdvBuySetting(0,4)'></input>":'')
 	if (player.prime.features>5) document.getElementById('option_wait_for_next').value=virtual.activated?player.prime.boosts.virtual.automatedBuying.waitForNextEmbrace:player.prime.automatedBuying.prime.waitForNext
