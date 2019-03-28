@@ -652,7 +652,7 @@ function openAdvBuySetting(id) {
 		for (idF=1;idF<8;idF++) selectList=selectList+"<option value="+idF+">"+idF+"</option>"
 	}
 	for (idF=1;idF<8;idF++) {
-		var preceding='<td><b>Factor '+romanNumerals[idF-1]+'</b>:</td>'
+		var preceding='<td><b>因數'+romanNumerals[idF-1]+'</b>:</td>'
 		if (id<1) updateElement('factorRow_'+idF,preceding+"<td id='factor_"+idF+"'></td><td><button id='factorUpgrade_"+idF+"' onclick='buyFactor("+idF+",false,virtual.activated)'></button></td>")
 		else {
 			showElement('factorRow_'+idF,'table-row')
