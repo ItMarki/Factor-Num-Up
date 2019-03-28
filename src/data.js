@@ -102,7 +102,7 @@ oldFeatureTab=''
 showNotificationTimeout=null
 disableSave=false
 
-const milestoneRequirements=['購買第一因數。','購買第二因數。','購買第四因數。','購買第七因數。','擁抱質數力量。','購買4升級。','購買8升級。','使用燃料去啓動你第一加成。','啓動第四加成。','升級你的燃料，將效率增加到150%。','購買12升級。','啓動第八加成。','完成第一挑戰。','破裂遊戲。','到達650錯誤。','完成第四挑戰。','Complete the eighth challenge.','Find out there is holding section of clicks.','Buy 4 break upgrades.','Go to next parallel universe.','Have partial prime.','Have dust during going to next parallel universe.','Go to the third universe.']
+const milestoneRequirements=['購買第一因數。','購買第二因數。','購買第四因數。','購買第七因數。','擁抱質數力量。','購買4升級。','購買8升級。','使用燃料去啓動你第一加成。','啓動第四加成。','升級你的燃料，將效率增加到150%。','購買12升級。','啓動第八加成。','完成第一挑戰。','破裂遊戲。','到達650錯誤。','完成第四挑戰。','完成第八挑戰。','找出有按的持有部。','購買4破裂升級。','去往下一個平行宇宙。','擁有部分質數。','在去往下一個平行宇宙是擁有塵。','去往第三宇宙。']
 costs={factors:[10],features:[0,10,15,20,100,1e3,2e3,5e3,1e7,2e8,3e9,5e13,1e16,1e23,1.5e23,2e23,4e23,6e23],upgrades:[1,2,3,4,8,15,35,55,1e4,2e4,5e4,1e5],breakUpgrades:[1,2,3,5,30,45,60,75]}
 costMultipliers=[]
 numberPerSecond=0
